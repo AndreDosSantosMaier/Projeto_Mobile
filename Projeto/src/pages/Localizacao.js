@@ -22,12 +22,12 @@ export default function Localizacao({navigation}){
         return () => listen()
     },[])
 
-    function deleteLocal(id){
+/*     function deleteLocal(id){
         const localDocRef = doc(database, 'Localizacao', id)
         //                 vai acessar a database Local, e usar o parametro ID
         deleteDoc(localDocRef)
         //deletar o bagulho com o id selecionado
-    }
+    } */
     return(
         <View style={styles.container}>
             <Text style={styles.txtLocal}>Localização</Text>
@@ -37,10 +37,8 @@ export default function Localizacao({navigation}){
                 return(
                     <View style= {styles.Local}>
                         <Text style= {styles.LocalTxt}
-                        onPress={()=> {navigation.navigate("Hoteis", {
-                            id: item.id
-                        })
-                    }}>{item.nome}
+                        onPress={()=> {navigation.navigate("Hub" )
+                    }}>{item.nome}{item.codigo}
                         </Text>
                         <Image style={{width:100, height:100}}source={{uri: item.imagem}}/>
 

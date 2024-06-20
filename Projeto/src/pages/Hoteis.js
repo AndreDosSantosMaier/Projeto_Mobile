@@ -38,7 +38,6 @@ export default function Hoteis({navigation}){
                     <View style= {styles.Hoteis}>
                         <Text style= {styles.HoteisTxt}>{item.nome}</Text>
                         <Image style={{width:100, height:100}}source={{uri: item.imagem}}/>
-
                     </View>
                 )
             }} 
